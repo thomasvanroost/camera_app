@@ -48,7 +48,9 @@ var app = {
     },
 
     takePicture: function() {
-	      navigator.camera.getPicture( onSucces,
+      navigator.camera.getPicture( function( imageURI ) {
+        alert( imageURI );
+      },
       function( message ) {
         alert( message );
       },
@@ -56,11 +58,5 @@ var app = {
         quality: 50,
         destinationType: Camera.DestinationType.FILE_URI
       });
-      
-    },
-    
-    function onSuccess(imageData) {
-    	var image = document.getElementById('myImage');
-		image.src = "data:image/jpeg;base64," + imageData;
-	};
+    }
 };
