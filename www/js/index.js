@@ -48,15 +48,20 @@ var app = {
     },
 
     takePicture: function() {
-      navigator.camera.getPicture( function( imageURI ) {
-        alert( imageURI );
-      },
+	      navigator.camera.getPicture( onSucces,
       function( message ) {
         alert( message );
+        setpicture();
       },
       {
         quality: 50,
         destinationType: Camera.DestinationType.FILE_URI
       });
-    }
+      
+    },
+    
+    function onSuccess(imageData) {
+    	var image = document.getElementById('myImage');
+		image.src = "data:image/jpeg;base64," + imageData;
+	}
 };
