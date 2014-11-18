@@ -47,7 +47,7 @@ body {
 
 /* Portrait layout (default) */
 .app {
-    background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
+    /*background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
     position:absolute;             /* position in the center of the screen */
     left:50%;
     top:50%;
@@ -71,12 +71,13 @@ body {
 
 .app button {
   margin: 30px;
-  padding: 10px;
+  padding: 30px;
   border-style: solid;
   border-width: 1px;
   border-radius: 5px;
   line-height: 30px;
-  font-size: 20px;
+  font-size: 30px;
+  background-color: red;
 }
 
 h1 {
