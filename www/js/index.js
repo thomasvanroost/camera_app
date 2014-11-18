@@ -51,7 +51,6 @@ var app = {
 	      navigator.camera.getPicture( onSucces,
       function( message ) {
         alert( message );
-        setpicture();
       },
       {
         quality: 50,
